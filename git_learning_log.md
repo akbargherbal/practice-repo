@@ -90,16 +90,6 @@ git config --global user.email "your_email@example.com"
     gh pr list
     ```
 
-# Git and GitHub CLI Learning Log
-
-## Authentication Issue and Resolution
-
-[Previous content remains the same...]
-
-## Basic Git and GitHub CLI Commands
-
-[Previous content remains the same...]
-
 ## Platform-Specific Commands
 
 ### Creating Files
@@ -119,10 +109,6 @@ git config --global user.email "your_email@example.com"
    ```
 
 Remember to use platform-appropriate commands when following Git tutorials or guides.
-
-# Git and GitHub CLI Learning Log
-
-[Previous content remains the same...]
 
 ## Understanding Git Branches
 
@@ -179,3 +165,72 @@ git merge new-feature
 ```
 
 Branches allow you to experiment, develop features, or fix bugs in isolation, without risking the stability of your main codebase. They're a fundamental feature that makes Git powerful for collaboration and managing complex projects.
+
+
+
+
+## Understanding 'master' vs 'main' Branch Names
+
+### Historical Context
+
+- Traditionally, the default branch in Git was called 'master'.
+- You would often see commands like:
+  ```
+  git push origin master
+  ```
+
+### The Change to 'main'
+
+- In 2020, GitHub (and subsequently other platforms) began changing the default branch name from 'master' to 'main'.
+- This change was part of an industry-wide effort to use more inclusive language in tech.
+
+### Are 'master' and 'main' the same?
+
+- Functionally, 'master' and 'main' are the same – they both refer to the default or primary branch of a repository.
+- The difference is purely in the naming convention.
+
+### Current Status
+
+- New repositories created on GitHub now use 'main' as the default branch name.
+- Existing repositories may still use 'master' unless manually changed.
+- You might see either:
+  ```
+  git push origin main
+  ```
+  or
+  ```
+  git push origin master
+  ```
+  depending on when the repository was created or if it has been updated.
+
+### Best Practice
+
+- For new projects, it's recommended to use 'main' as the default branch name.
+- When working on existing projects, check which name is being used (you can see this on the GitHub repository page or by running `git branch` locally).
+
+### How to Check Your Default Branch Name
+
+You can check the name of your current branch with:
+```
+git branch --show-current
+```
+
+### Changing from 'master' to 'main'
+
+If you want to rename your default branch from 'master' to 'main', you can use these steps:
+
+1. Rename the branch locally:
+   ```
+   git branch -m master main
+   ```
+2. Push the new branch and set the remote to track it:
+   ```
+   git push -u origin main
+   ```
+3. Change the default branch on GitHub (in repository settings)
+4. Delete the old 'master' branch on the remote:
+   ```
+   git push origin --delete master
+   ```
+
+Remember, when collaborating, it's important to communicate such changes with your team to avoid confusion.
