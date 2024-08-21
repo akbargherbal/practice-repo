@@ -89,3 +89,33 @@ git config --global user.email "your_email@example.com"
     ```
     gh pr list
     ```
+
+# Git and GitHub CLI Learning Log
+
+## Authentication Issue and Resolution
+
+[Previous content remains the same...]
+
+## Basic Git and GitHub CLI Commands
+
+[Previous content remains the same...]
+
+## Platform-Specific Commands
+
+### Creating Files
+
+1. On Unix-like systems (Linux, macOS):
+   ```
+   touch filename.txt
+   ```
+
+2. On Windows:
+   ```
+   echo. > filename.txt
+   ```
+   Note: This creates an empty file. To add content directly from the command line:
+   ```
+   echo Some content > filename.txt
+   ```
+
+Remember to use platform-appropriate commands when following Git tutorials or guides.    
